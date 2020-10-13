@@ -1,0 +1,51 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.processp" >
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+<application>
+<service
+    android:name=".MyService"
+    android:enabled="true"
+    android:exported="true"
+    android:process=":MyService"
+    android:persistent="true"
+    >
+    <intent-filter android:priority = "1000">
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.DATE_CHANGED"/>
+        <action android:name="android.intent.action.MEDIA_MOUNTED" />
+        <action android:name="android.intent.action.USER_PRESENT" />
+        <action android:name="android.intent.action.ACTION_TIME_TICK" />
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+    </intent-filter>
+</service>
+<service
+    android:name=".GuardService"
+    android:enabled="true"
+    android:exported="true"
+    android:process=":Guard">
+    <intent-filter android:priority = "1000">
+        <!-- 系统启动完成后会调用-->
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.DATE_CHANGED"/>
+        <action android:name="android.intent.action.MEDIA_MOUNTED" />
+        <action android:name="android.intent.action.USER_PRESENT" />
+        <action android:name="android.intent.action.ACTION_TIME_TICK" />
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+    </intent-filter></service>
+
+
+<receiver android:name=".BootCompleteReceiver">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+    </intent-filter>
+</receiver>
+</application>
+</manifest>

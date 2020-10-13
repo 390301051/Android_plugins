@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:id="@+id/header_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_header_toast_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="7dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/header_toast_re"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/header_toast_smallimg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/czdzicon" />
+
+            <TextView
+                android:id="@+id/header_toast_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/header_toast_smallimg"
+                android:text="CZDZ地震消息"
+                android:textColor="#797979"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/header_toast_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/header_toast_title"
+                android:text=""
+                android:textColor="#999"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/header_toast_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_toast_re"
+            android:layout_marginTop="5dp"
+            android:text="监测到地震预警信息"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/header_toast_bigimg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+          />
+
+        <TextView
+            android:id="@+id/header_toast_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_toast_name"
+            android:layout_marginTop="3dp"
+            android:textColor="#666"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

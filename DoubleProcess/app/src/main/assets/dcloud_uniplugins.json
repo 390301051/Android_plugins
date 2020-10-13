@@ -1,0 +1,13 @@
+{
+  "nativePlugins": [
+    {
+      "plugins": [
+        {
+          "type": "module",
+          "name": "Uni_Windowheadtoast",
+          "class": "com.example.windowheadtoast.windowToast"
+        }
+      ]
+    }
+  ]
+}
