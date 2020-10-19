@@ -35,8 +35,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/header_toast_smallimg"
                 android:text="CZDZ地震消息"
-                android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textColor="#797979"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/header_toast_time"
@@ -46,8 +46,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/header_toast_title"
                 android:text=""
-                android:textColor="#747474"
-                android:textSize="11sp" />
+                android:textColor="#999"
+                android:textSize="13sp" />
         </RelativeLayout>
 
 
@@ -58,8 +58,8 @@
             android:layout_below="@+id/header_toast_re"
             android:layout_marginTop="5dp"
             android:text="监测到地震预警信息"
-            android:textColor="#000000"
-            android:textSize="13sp" />
+            android:textColor="#333"
+            android:textSize="14sp" />
 
         <ImageView
             android:id="@+id/header_toast_bigimg"
@@ -74,9 +74,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/header_toast_name"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="3dp"
             android:textColor="#666"
-            android:textSize="12sp" />
+            android:textSize="13sp" />
 
     </RelativeLayout>
 

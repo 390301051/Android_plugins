@@ -1,11 +1,22 @@
 {
   "nativePlugins": [
     {
+      "hooksClass": "",
       "plugins": [
         {
           "type": "module",
-          "name": "Uni_Windowheadtoast",
+          "name": "Uni_joker_Windowheadtoast",
           "class": "com.example.windowheadtoast.windowToast"
+        }
+      ]
+    },
+    {
+     "hooksClass": "",
+      "plugins": [
+        {
+          "type": "module",
+          "name": "Uni_DoubleProcess",
+          "class": "com.example.processp.DoubleProcessMain"
         }
       ]
     }

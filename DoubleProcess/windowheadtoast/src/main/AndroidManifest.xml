@@ -3,8 +3,5 @@
     package="com.example.windowheadtoast">
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <application>
-
-    </application>
-
+    <application></application>
 </manifest>

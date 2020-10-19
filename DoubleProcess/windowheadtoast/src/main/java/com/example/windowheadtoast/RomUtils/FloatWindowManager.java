@@ -14,12 +14,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 
-/**
- * Description:
- *
- * @author zhaozp
- * @since 2016-10-17
- */
 
 public class FloatWindowManager {
     private static final String TAG = "FloatWindowManager";

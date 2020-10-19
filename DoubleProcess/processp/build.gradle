@@ -35,10 +35,10 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly fileTree(dir: '../app/libs', include: ['uniapp-v8-release.aar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    testImplementation 'junit:junit:4.12'
+    compileOnly 'androidx.appcompat:appcompat:1.2.0'
+//    testImplementation 'junit:junit:4.12'
 //    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
@@ -51,5 +51,5 @@ dependencies {
     compileOnly 'com.android.support:appcompat-v7:27.1.0'
 //    compileOnly 'com.alibaba:fastjson:1.1.46.android'
     implementation 'com.alibaba:fastjson:1.1.46.android'
-    implementation fileTree(dir: '../app/libs', include: ['*.aar', '*.jar'], exclude: [])
+    compileOnly fileTree(dir: '../app/libs', include: ['*.aar', '*.jar'], exclude: [])
 }

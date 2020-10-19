@@ -11,6 +11,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    //使用uniapp时，需复制下面代码
+    /*代码开始*/
+    aaptOptions {
+        additionalParameters '--auto-add-overlay'
+//        noCompress 'foo', 'bar'
+        ignoreAssetsPattern "!.svn:!.git:.*:!CVS:!thumbs.db:!picasa.ini:!*.scc:*~"
+    }
+    /*代码结束*/
     buildTypes {
         release {
             minifyEnabled false
@@ -18,13 +26,28 @@ android {
         }
     }
 
+
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly fileTree(dir: '../app/libs', include: ['uniapp-v8-release.aar'])
+    compileOnly 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+//
+    //必须添加的依赖
+    //noinspection GradleCompatible
+    compileOnly 'com.android.support:recyclerview-v7:27.1.0'
+    //noinspection GradleCompatible
+    compileOnly 'com.android.support:support-v4:27.1.0'
+    //noinspection GradleCompatible
+    compileOnly 'com.android.support:appcompat-v7:27.1.0'
+//    compileOnly 'com.alibaba:fastjson:1.1.46.android'
+    implementation 'com.alibaba:fastjson:1.1.46.android'
+    implementation project(path: ':windowheadtoast')
+    // 添加依赖模块
 }
